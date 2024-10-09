@@ -4,6 +4,9 @@ import SegmentationChart from '../components/SegmentationChart';
 import ProductPerformanceGraph from '../components/ProductPerformanceGraph';
 import TrendAnalysisChart from '../components/TrendAnalysisChart';
 import DownloadableReportButton from '../components/DownloadableReportButton';
+import { Chart, registerables } from 'chart.js'; // Import Chart.js and registerables
+
+Chart.register(...registerables); // Register all necessary components including category scale
 
 const mockPerformanceData = { /* Mock data for PerformanceDashboard */ };
 const mockSegmentationData = [ /* Mock data for SegmentationChart */ ];
@@ -42,11 +45,14 @@ const AnalyticsReportingPage = () => {
     return (
         <div className="flex flex-col items-center justify-center space-y-4 p-4"> {/* Main container */}
             <PerformanceDashboard data={performanceData} /> {/* Performance dashboard component */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full"> {/* Responsive grid for charts */}
+            
+            <div className="flex flex-row items-center justify-center gap-4 w-full"> {/* Centered container for charts */}
                 <SegmentationChart data={segmentationData} /> {/* Segmentation chart component */}
                 <ProductPerformanceGraph data={productPerformanceData} /> {/* Product performance graph */}
                 <TrendAnalysisChart data={trendData} /> {/* Trend analysis chart */}
             </div>
+
+            
             <DownloadableReportButton /> {/* Downloadable report button component */}
         </div>
     );

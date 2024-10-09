@@ -12,13 +12,13 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <nav className="w-full bg-light p-4 text-center">
-          <ul className="flex justify-center space-x-4">
-            <li><Link to="/" className="text-blue-500 hover:text-blue-700">Home</Link></li>
-            <li><Link to="/customer-profile" className="text-blue-500 hover:text-blue-700">Customer Profile</Link></li>
-            <li><Link to="/product-catalog" className="text-blue-500 hover:text-blue-700">Product Catalog</Link></li>
-            <li><Link to="/analytics-reporting" className="text-blue-500 hover:text-blue-700">Analytics Reporting</Link></li>
-            <li><Link to="/settings" className="text-blue-500 hover:text-blue-700">Settings</Link></li> {/* Link to SettingsPage */}
+        <nav className="w-full bg-gradient-to-r bg-black p-4 shadow-lg">
+          <ul className="flex justify-center space-x-8">
+            <li><Link to="/" className="text-white font-semibold hover:text-yellow-300 transition duration-300">Home</Link></li>
+            <li><Link to="/customer-profile" className="text-white font-semibold hover:text-yellow-300 transition duration-300">Customer Profile</Link></li>
+            <li><Link to="/product-catalog" className="text-white font-semibold hover:text-yellow-300 transition duration-300">Product Catalog</Link></li>
+            <li><Link to="/analytics-reporting" className="text-white font-semibold hover:text-yellow-300 transition duration-300">Analytics Reporting</Link></li>
+            <li><Link to="/settings" className="text-white font-semibold hover:text-yellow-300 transition duration-300">Settings</Link></li>
           </ul>
         </nav>
         <Routes>
